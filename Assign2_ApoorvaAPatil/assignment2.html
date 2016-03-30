@@ -1,0 +1,97 @@
+<!--
+    Theme Name: Interactive Quiz using HTML/CSS3/JavaScript/JQuery
+    Date: January 22 2016
+    Description: Basic HTML/CSS Interactive Quiz 
+    Version: 1.0
+    Author: Apoorva Patil
+	Student ID: 00001188522
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 2</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="assignment2.css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="questions.js"></script>
+	<script type="text/javascript" src="assignment2.js"></script>
+</head>
+<body>
+	<div id="parent1">
+		<div id="child0">
+			<img src="quiz-img.jpg" alt="image not available"/>
+		</div>
+		<div id="child1">
+			<h4>Questions from the domain:</h4>
+			<h4 id="sub"><script type="text/javascript">getSubjects();</script></h4>
+		</div>
+		
+		<div id="child2">
+			<span id="sp1"><script type="text/javascript">getDates();</script></span>
+		</div>
+	</div>
+	<div id="Uppermid">
+		<div id="rightmid">
+				<span><b>You scored:</span>
+				<span id="rightans">0</span>
+			</div>
+			<div id="wrongmid">
+				<span><b>Incorrect answers:</span>
+				<span id="wrongans">0</span>
+			</div>
+	</div>
+	<div id="parent2">
+		<div id="child21">
+			
+			<div id ="child212">
+				<span id="timerrun">Timer(45s):</span><br>
+				<span id="timerval">00:00</span>
+
+			</div>
+
+			<div id="progress">
+				<span>Progress bar:</span><br>
+				<div id="outerprog">
+					<div id="innerprog">
+					</div>
+				</div>	
+			</div>
+
+			
+		</div>
+		<div id="cent">
+			<p id="centdata"> Choose the level of quiz:</p>
+				<div id="centev">
+					<button class="choice" onclick="selEasyQue()">Easy</button>
+					<button class="choice" onclick="selHardQue()">Hard</button>
+				</div>
+		</div>
+		<div id="child22">
+			
+			
+			<div id="wishes">
+				<span id="best">All The Best!!</span>
+			</div>
+			<div id="result">
+				<span><b>Score:</span>
+				<span id="totalscore">0</span>
+			</div>
+
+			<div id="polls">
+				<span> You can rate us:</span>
+				<p>
+					<input type="radio" name="rating" value="excellent" id="opt1">* * * * *<br>
+					<input type="radio" name="rating" value="good" id="opt2">* * * *<br>
+					<input type="radio" name="rating" value="ok" id="opt3">* * *<br>
+					<input type="radio" name="rating" value="bad" id="opt4">* *<br>
+					<input type="radio" name="rating" value="worst" id="opt5">*<br>
+					<button onclick="pollView()" id="subs">SUBMIT</button>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="foot">
+		<div id="copy">Copyright©2016</div>
+	</div>
+</body>
+</html>
